@@ -1,4 +1,4 @@
-package Implements10;
+package ed2;
 
 public class Main {
     public static void main(String[] args) {
@@ -13,7 +13,7 @@ public class Main {
                 "Marketing e Inovação" };
 
         // Criando o grafo bipartido com 9 professores e 15 disciplinas
-        GrafoBipartido grafo = new GrafoBipartido(9, 15, professores, disciplinas); // 9 professores, 15 disciplinas
+        GrafoBipartido grafo = new GrafoBipartido(professores, disciplinas); // Professores e Disciplinas
 
         // Adicionando as preferências dos professores (pesos) de forma correta
         grafo.adicionarAresta(0, 0, 2); // Cristiane - Programação II

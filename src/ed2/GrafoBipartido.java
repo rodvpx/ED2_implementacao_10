@@ -1,7 +1,7 @@
-package Implements10;
+package ed2;
 
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class GrafoBipartido {
     private List<List<Aresta>> verticesProfessores;
@@ -9,18 +9,31 @@ public class GrafoBipartido {
     private String[] nomesProfessores;
     private String[] nomesDisciplinas;
 
-    public GrafoBipartido(int numProfessores, int numDisciplinas, String[] nomesProfessores,
-            String[] nomesDisciplinas) {
-        this.nomesProfessores = nomesProfessores;
+    public GrafoBipartido(String[] nomesProfessores, String[] nomesDisciplinas) {
+        // Duplicando os professores para igualar o número de disciplinas
+        int numProfessores = nomesProfessores.length;
+        int numDisciplinas = nomesDisciplinas.length;
+
+        // Se houver mais disciplinas que professores, duplicamos os professores
+        if (numDisciplinas > numProfessores) {
+            List<String> listaProfessores = new ArrayList<>();
+            for (int i = 0; i < numDisciplinas; i++) {
+                listaProfessores.add(nomesProfessores[i % numProfessores]);
+            }
+            this.nomesProfessores = listaProfessores.toArray(new String[0]);
+        } else {
+            this.nomesProfessores = nomesProfessores;
+        }
+
         this.nomesDisciplinas = nomesDisciplinas;
         this.verticesProfessores = new ArrayList<>();
         this.verticesDisciplinas = new ArrayList<>();
 
-        for (int i = 0; i < numProfessores; i++) {
+        for (int i = 0; i < this.nomesProfessores.length; i++) {
             verticesProfessores.add(new ArrayList<>());
         }
 
-        for (int i = 0; i < numDisciplinas; i++) {
+        for (int i = 0; i < this.nomesDisciplinas.length; i++) {
             verticesDisciplinas.add(new ArrayList<>());
         }
     }

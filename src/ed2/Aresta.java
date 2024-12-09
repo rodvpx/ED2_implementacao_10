@@ -1,4 +1,4 @@
-package Implements10;
+package ed2;
 
 public class Aresta {
     private int destino; // Vértice de destino (disciplina ou professor)
