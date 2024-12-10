@@ -1,3 +1,8 @@
+/*
+ * Estrutura de Dados II - Junio Cesar - 4º Período Sistemas de Informação
+ * Implementação 10
+ * Alunos: Isabella, Luan, Rodrigo  */
+
 package ed2;
 
 import java.util.ArrayList;
@@ -6,7 +11,7 @@ import java.util.List;
 public class GrafoBipartido {
     private List<List<Aresta>> verticesProfessores;
     private List<List<Aresta>> verticesDisciplinas;
-    private String[] nomesProfessores;
+    public String[] nomesProfessores;
     private String[] nomesDisciplinas;
 
     public GrafoBipartido(String[] nomesProfessores, String[] nomesDisciplinas) {
