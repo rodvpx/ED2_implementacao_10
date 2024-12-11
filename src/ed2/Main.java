@@ -24,49 +24,37 @@ public static void main(String[] args) {
     GrafoBipartido grafo = new GrafoBipartido(professores, disciplinas);
 
     // Adicionando as preferências dos professores (pesos)
-    // Amaury - Arquitetura de Software e Sistemas Operacionais
     grafo.adicionarAresta(0, 1, 2);  // Amaury - Arquitetura de Software
     grafo.adicionarAresta(0, 14, 1); // Amaury - Sistemas Operacionais
 
-// Cristiane - Programação II e Banco de Dados II
     grafo.adicionarAresta(1, 10, 1); // Cristiane - Programação II
     grafo.adicionarAresta(1, 2, 2);  // Cristiane - Banco de Dados II
     grafo.adicionarAresta(1, 6, 6);  // Cristiane - Intro. Mineração de Dados
     grafo.adicionarAresta(1, 11, 3); // Cristiane - Programação Mobile
 
-// Gabriel - Elaboração de Projetos e Engenharia de Software
     grafo.adicionarAresta(2, 3, 5);  // Gabriel - Elaboração de Projetos
     grafo.adicionarAresta(2, 4, 1);  // Gabriel - Engenharia de Software
     grafo.adicionarAresta(2, 13, 2); // Gabriel - Redes de Computadores
 
-// Jean - Redes e Metodologia Científica
     grafo.adicionarAresta(3, 13, 0); // Jean - Redes de Computadores (menor peso)
     grafo.adicionarAresta(3, 9, 1);  // Jean - Metodologia Científica (menor peso)
 
-// Julio - Lógica e Marketing e Inovação
     grafo.adicionarAresta(4, 7, 2);  // Julio - Lógica
     grafo.adicionarAresta(4, 8, 3);  // Julio - Marketing e Inovação
 
-// Junio - Estrutura de Dados II e Programação Mobile
     grafo.adicionarAresta(5, 5, 1);  // Junio - Estrutura de Dados II
     grafo.adicionarAresta(5, 11, 3); // Junio - Programação Mobile
     grafo.adicionarAresta(5, 6, 6);  // Junio - Intro. Mineração de Dados
 
-// Lucas - Álgebra Linear
     grafo.adicionarAresta(6, 7, 6);  // Lucas - Lógica
     grafo.adicionarAresta(6, 0, 1);  // Lucas - Álgebra Linear
 
-// Nattane - Programação Web I
     grafo.adicionarAresta(7, 11, 6); // Nattane - Programação Mobile
     grafo.adicionarAresta(7, 12, 1); // Nattane - Programação Web I
     grafo.adicionarAresta(7, 9, 6);  // Nattane - Metodologia Científica
 
-// Paulo - Intro. Mineração de Dados
     grafo.adicionarAresta(8, 1, 5);  // Paulo - Arquitetura de Software
     grafo.adicionarAresta(8, 6, 2);  // Paulo - Intro. Mineração de Dados
-
-
-
 
     // Obtendo a matriz de custos para o algoritmo Húngaro
         int[][] custo = grafo.obterMatrizDeCusto();
